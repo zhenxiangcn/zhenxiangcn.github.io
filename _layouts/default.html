@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+  <!-- Head -->
+  <head>
+  {%- if page.redirect -%}
+    <meta http-equiv="refresh" content="3; url={{ site.baseurl }}/" />
+  {%- endif -%}
+  {% include head.html %}
+  </head>
+
+  <!-- Body -->
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+
+    <!-- Header -->
+    {%- include header.html %}
+
+    <!-- Content -->
+    <div class="container mt-5">
+
+
+      <style>
+
+
+        body {
+/*          font-family: "MingLiU", "微軟新細明體", "Apple LiSung", "PMingLiU", "kaiti", "kaishu", "zhengshu", "zhengkai", cursive, sans-serif;*/
+          font-family:  "PMingLiU", "微軟新細明體", "Apple LiSung",  "Microsoft JhengHei", "MingLiU", "kaiti", "kaishu", "zhengshu", "zhengkai", "Microsoft JhengHei", "微軟正黑體", "Heiti TC", "黑體-繁",cursive, sans-serif; 
+
+        }
+
+        p {
+
+          font-family:  "PMingLiU", "微軟新細明體", "MingLiU", "Apple LiSung",  "Microsoft JhengHei", "kaiti", "kaishu", "zhengshu", "zhengkai", "Microsoft JhengHei", "微軟正黑體", "Heiti TC", "黑體-繁",cursive, sans-serif; 
+
+/*          color: blueviolet;*/
+          font-size: 27px;
+
+        }
+
+      </style>
+
+
+      {{ content }}
+
+
+    </div>
+
+    <!-- Footer -->
+    {%- include footer.html %}
+
+    <!-- JavaScripts -->
+    {% include scripts/jquery.html %}
+    {% include scripts/bootstrap.html %}
+    {% include scripts/masonry.html %}
+    {% include scripts/misc.html %}
+    {% include scripts/badges.html %}
+    {% include scripts/mathjax.html %}
+    {% include scripts/analytics.html %}
+    {% include scripts/progressBar.html %}
+
+  </body>
+</html>
